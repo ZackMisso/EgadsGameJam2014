@@ -332,7 +332,7 @@ public class Player extends GameEntity{
     }
     
     public void checkCollisionsWithGoal(Goal g, DimensionState state){
-        if(getRelativeX(g)<width/2+g.getWidth()/2 && getRelativeY(g)<height/2+g.getHeight()/2){
+        if(Math.abs(getRelativeX(g))<width/2+g.getWidth()/2 && Math.abs(getRelativeY(g))<height/2+g.getHeight()/2){
             System.out.println("You win! Deaths: " + deaths);
             System.exit(0);
         }
